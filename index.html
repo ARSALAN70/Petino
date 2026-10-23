@@ -1043,3 +1043,821 @@
     }
   </style>
 </head>
+<body>
+
+  <div class="announcement">
+    🐾 پتینو؛ انتخابی خوشمزه برای دوست کوچولوی شما
+  </div>
+
+  <header>
+    <div class="container navbar">
+      <a class="logo" href="#home">
+        <span class="logo-icon">🐾</span>
+        <span>پتینو<small>PETINO STORE</small></span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#home">صفحه اصلی</a>
+        <a href="#categories">دسته‌بندی</a>
+        <a href="#shop">محصولات</a>
+        <a href="#about">درباره ما</a>
+        <a href="#faq">سؤالات متداول</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-button" onclick="openCart()">
+          🛒 سبد خرید
+          <span class="cart-count" id="cartCount">۰</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-card">
+
+          <div class="hero-content">
+            <span class="eyebrow">💚 مخصوص دوستای پشمالو</span>
+
+            <h1>
+              حال خوبشون،
+              <br>
+              از <span>پتینو</span> شروع می‌شه!
+            </h1>
+
+            <p>
+              برای سگ‌ها و گربه‌هایی که عضوی از خانواده‌اند؛
+              غذای مناسب، تشویقی و محصولات نگهداری حیوانات خانگی
+              را در پتینو پیدا کنید.
+            </p>
+
+            <a href="#shop" class="button-primary">
+              مشاهده محصولات ←
+            </a>
+
+            <a href="#categories" class="button-outline">
+              دسته‌بندی‌ها
+            </a>
+          </div>
+
+          <div class="hero-image"
+               role="img"
+               aria-label="تصویر سگ دوست‌داشتنی">
+          </div>
+
+        </div>
+
+        <div class="trust-row">
+
+          <div class="trust-item">
+            <div class="trust-icon">🐕</div>
+            <div>
+              <strong>مخصوص سگ‌ها</strong>
+              <small>انتخاب محصولات متنوع</small>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <div class="trust-icon">🐈</div>
+            <div>
+              <strong>مخصوص گربه‌ها</strong>
+              <small>غذا و تشویقی گربه</small>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <div class="trust-icon">💬</div>
+            <div>
+              <strong>ثبت سفارش آسان</strong>
+              <small>ارتباط از طریق واتساپ</small>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <div class="trust-icon">❤️</div>
+            <div>
+              <strong>با عشق به حیوانات</strong>
+              <small>برای همراهان دوست‌داشتنی</small>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="categories">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <h2>از کجا شروع کنیم؟ 🐾</h2>
+            <p>محصول موردنظرت را انتخاب کن.</p>
+          </div>
+        </div>
+
+        <div class="categories">
+
+          <article class="category-card"
+                   onclick="setCategory('dog')">
+            <img
+              src="https://images.unsplash.com/photo-1551717743-49959800b1f6?auto=format&fit=crop&w=600&q=80"
+              alt="سگ خانگی"
+              loading="lazy">
+            <h3>غذای سگ</h3>
+            <p>غذای خشک و محصولات سگ</p>
+          </article>
+
+          <article class="category-card"
+                   onclick="setCategory('cat')">
+            <img
+              src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=600&q=80"
+              alt="گربه خانگی"
+              loading="lazy">
+            <h3>غذای گربه</h3>
+            <p>غذای خشک و مرطوب گربه</p>
+          </article>
+
+          <article class="category-card"
+                   onclick="setCategory('treat')">
+            <img
+              src="https://images.unsplash.com/photo-1582798358481-d199fb7347bb?auto=format&fit=crop&w=600&q=80"
+              alt="تشویقی حیوانات خانگی"
+              loading="lazy">
+            <h3>تشویقی</h3>
+            <p>برای لحظه‌های خوشمزه</p>
+          </article>
+
+          <article class="category-card"
+                   onclick="setCategory('accessory')">
+            <img
+              src="https://images.unsplash.com/photo-1601758123927-196d3b5d6b3d?auto=format&fit=crop&w=600&q=80"
+              alt="لوازم حیوانات خانگی"
+              loading="lazy">
+            <h3>لوازم پت</h3>
+            <p>لوازم کاربردی نگهداری</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <h2>محصولات پتینو 🛍️</h2>
+            <p>محصول دلخواهت را پیدا کن و به سبد خرید اضافه کن.</p>
+          </div>
+        </div>
+
+        <div class="shop-toolbar">
+
+          <input
+            class="search-box"
+            id="searchInput"
+            type="search"
+            placeholder="🔎 جست‌وجوی نام محصول..."
+            aria-label="جست‌وجوی محصولات">
+
+          <button class="filter-button active"
+                  data-category="all"
+                  onclick="setCategory('all')">
+            همه
+          </button>
+
+          <button class="filter-button"
+                  data-category="dog"
+                  onclick="setCategory('dog')">
+            غذای سگ
+          </button>
+
+          <button class="filter-button"
+                  data-category="cat"
+                  onclick="setCategory('cat')">
+            غذای گربه
+          </button>
+
+          <button class="filter-button"
+                  data-category="treat"
+                  onclick="setCategory('treat')">
+            تشویقی
+          </button>
+
+          <button class="filter-button"
+                  data-category="accessory"
+                  onclick="setCategory('accessory')">
+            لوازم پت
+          </button>
+
+        </div>
+
+        <div class="products-grid" id="productsGrid"></div>
+
+        <div class="empty-message" id="emptyMessage">
+          محصولی با این مشخصات پیدا نشد.
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="promo">
+
+          <div>
+            <h2>دوست کوچولوت لایق بهترین‌هاست! 🐶</h2>
+            <p>
+              محصولات موردنظرت را انتخاب کن و برای ثبت سفارش
+              با پتینو در ارتباط باش.
+            </p>
+          </div>
+
+          <a href="#shop" class="button-primary">
+            دیدن محصولات
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="about-grid">
+
+          <img
+            class="about-image"
+            src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1000&q=85"
+            alt="دو سگ دوست‌داشتنی"
+            loading="lazy">
+
+          <div class="about-content">
+            <span class="eyebrow">داستان پتینو 💚</span>
+
+            <h2>خانواده‌ای از جنس عشق به حیوانات</h2>
+
+            <p>
+              پتینو با یک هدف شکل گرفته است:
+              خرید محصولات حیوانات خانگی را برای صاحبان
+              سگ‌ها و گربه‌ها ساده‌تر و دلنشین‌تر کند.
+            </p>
+
+            <p>
+              در پتینو می‌توانی محصولات را بررسی کنی،
+              به سبد خرید اضافه کنی و سفارش خودت را
+              از طریق واتساپ برای فروشگاه بفرستی.
+            </p>
+
+            <div class="about-points">
+              <div>🐾 تنوع محصولات</div>
+              <div>💬 ارتباط مستقیم</div>
+              <div>🛒 خرید آسان</div>
+              <div>❤️ توجه به حیوانات</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <h2>سؤالات متداول</h2>
+            <p>پاسخ پرسش‌های رایج شما درباره سفارش از پتینو.</p>
+          </div>
+        </div>
+
+        <div class="faq-list">
+
+          <details>
+            <summary>چطور از پتینو سفارش بدهم؟</summary>
+            <p>
+              محصولات موردنظرت را به سبد خرید اضافه کن،
+              سپس روی ثبت سفارش واتساپی بزن تا فهرست خرید
+              برای فروشگاه ارسال شود.
+            </p>
+          </details>
+
+          <details>
+            <summary>آیا می‌توانم تعداد محصولات را تغییر بدهم؟</summary>
+            <p>
+              بله؛ در سبد خرید می‌توانی تعداد هر محصول را
+              کم یا زیاد کنی و مبلغ مجموع را ببینی.
+            </p>
+          </details>
+
+          <details>
+            <summary>هزینه ارسال چقدر است؟</summary>
+            <p>
+              هزینه ارسال، محدوده‌های تحت پوشش و زمان تحویل
+              باید پیش از ثبت سفارش با فروشگاه هماهنگ شود.
+            </p>
+          </details>
+
+          <details>
+            <summary>آیا قیمت‌های سایت قطعی هستند؟</summary>
+            <p>
+              قیمت‌های اولیه نمونه هستند. قبل از انتشار نهایی،
+              قیمت واقعی و موجودی هر محصول را وارد کن.
+            </p>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+          <h3>🐾 پتینو | PETINO</h3>
+          <p>
+            همراه دوست‌داشتنی شما برای انتخاب غذا
+            و محصولات حیوانات خانگی.
+          </p>
+        </div>
+
+        <div>
+          <h3>دسترسی سریع</h3>
+          <div class="footer-links">
+            <a href="#home">صفحه اصلی</a>
+            <a href="#categories">دسته‌بندی محصولات</a>
+            <a href="#shop">فروشگاه</a>
+            <a href="#faq">سؤالات متداول</a>
+          </div>
+        </div>
+
+        <div>
+          <h3>ارتباط با پتینو</h3>
+          <div class="footer-links">
+            <a href="https://wa.me/989022242154"
+               target="_blank"
+               rel="noopener noreferrer">
+              💬 ارتباط از طریق واتساپ
+            </a>
+            <p>برای اطلاع از قیمت و موجودی با ما تماس بگیرید.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        © <span id="currentYear"></span> PETINO — تمامی حقوق محفوظ است.
+      </div>
+
+    </div>
+  </footer>
+
+  <a
+    class="floating-whatsapp"
+    href="https://wa.me/989022242154"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="ارتباط با پتینو در واتساپ">
+    ☎
+  </a>
+
+  <div class="cart-overlay"
+       id="cartOverlay"
+       onclick="closeCart()"></div>
+
+  <aside class="cart-panel"
+         id="cartPanel"
+         aria-label="سبد خرید">
+
+    <div class="cart-header">
+      <h2>🛒 سبد خرید شما</h2>
+      <button class="close-cart"
+              onclick="closeCart()"
+              aria-label="بستن سبد خرید">×</button>
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="cart-footer">
+
+      <div class="cart-total">
+        <span>مبلغ کل:</span>
+        <span id="cartTotal">۰ تومان</span>
+      </div>
+
+      <button class="checkout-button"
+              onclick="checkoutWhatsApp()">
+        ثبت سفارش از طریق واتساپ ←
+      </button>
+
+      <p class="checkout-note">
+        ثبت سفارش نهایی پس از هماهنگی با فروشگاه انجام می‌شود.
+      </p>
+
+    </div>
+
+  </aside>
+
+  <div class="toast" id="toast"></div>
+  <script>
+  // شماره واتساپ فروشگاه پتینو
+  const WHATSAPP_NUMBER = "989022242154";
+
+  // محصولات نمونه فروشگاه
+  // قیمت‌ها را پیش از انتشار نهایی با قیمت واقعی جایگزین کن.
+  const products = [
+    {
+      id: 1,
+      name: "غذای خشک سگ بالغ",
+      category: "dog",
+      categoryName: "غذای سگ",
+      description: "غذای روزانه سگ‌های بالغ",
+      price: 850000,
+      image: "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?auto=format&fit=crop&w=700&q=80",
+      tag: "پرفروش"
+    },
+    {
+      id: 2,
+      name: "غذای خشک گربه بالغ",
+      category: "cat",
+      categoryName: "غذای گربه",
+      description: "غذای روزانه گربه‌های بالغ",
+      price: 690000,
+      image: "https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=700&q=80",
+      tag: "محبوب"
+    },
+    {
+      id: 3,
+      name: "تشویقی سگ",
+      category: "treat",
+      categoryName: "تشویقی",
+      description: "مناسب آموزش و تشویق سگ",
+      price: 180000,
+      image: "https://images.unsplash.com/photo-1582798358481-d199fb7347bb?auto=format&fit=crop&w=700&q=80",
+      tag: "ویژه"
+    },
+    {
+      id: 4,
+      name: "ظرف غذای حیوانات",
+      category: "accessory",
+      categoryName: "لوازم پت",
+      description: "ظرف مناسب سرو غذا",
+      price: 220000,
+      image: "https://images.unsplash.com/photo-1601758123927-196d3b5d6b3d?auto=format&fit=crop&w=700&q=80",
+      tag: ""
+    },
+    {
+      id: 5,
+      name: "غذای خشک توله سگ",
+      category: "dog",
+      categoryName: "غذای سگ",
+      description: "برای تغذیه توله‌سگ‌ها",
+      price: 780000,
+      image: "https://images.unsplash.com/photo-1551717743-49959800b1f6?auto=format&fit=crop&w=700&q=80",
+      tag: "توله سگ"
+    },
+    {
+      id: 6,
+      name: "غذای بچه گربه",
+      category: "cat",
+      categoryName: "غذای گربه",
+      description: "برای بچه‌گربه‌های در حال رشد",
+      price: 620000,
+      image: "https://images.unsplash.com/photo-1511044568932-338cba0ad803?auto=format&fit=crop&w=700&q=80",
+      tag: "بچه گربه"
+    },
+    {
+      id: 7,
+      name: "تشویقی گربه",
+      category: "treat",
+      categoryName: "تشویقی",
+      description: "تشویقی برای گربه‌های خانگی",
+      price: 145000,
+      image: "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=700&q=80",
+      tag: "محبوب"
+    },
+    {
+      id: 8,
+      name: "اسباب‌بازی حیوانات",
+      category: "accessory",
+      categoryName: "لوازم پت",
+      description: "برای سرگرمی و بازی حیوانات",
+      price: 160000,
+      image: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=700&q=80",
+      tag: ""
+    }
+  ];
+
+  let selectedCategory = "all";
+  let cart = [];
+
+  // تبدیل اعداد به شکل فارسی
+  function persianNumber(value) {
+    return Number(value).toLocaleString("fa-IR");
+  }
+
+  // نمایش قیمت به تومان
+  function formatPrice(price) {
+    return persianNumber(price) + " تومان";
+  }
+
+  // نمایش محصولات
+  function renderProducts() {
+    const grid = document.getElementById("productsGrid");
+    const emptyMessage = document.getElementById("emptyMessage");
+    const searchInput = document.getElementById("searchInput");
+
+    if (!grid || !emptyMessage || !searchInput) return;
+
+    const query = searchInput.value.trim().toLowerCase();
+
+    const filtered = products.filter(product => {
+      const categoryMatches =
+        selectedCategory === "all" ||
+        product.category === selectedCategory;
+
+      const searchMatches =
+        product.name.toLowerCase().includes(query) ||
+        product.description.toLowerCase().includes(query) ||
+        product.categoryName.toLowerCase().includes(query);
+
+      return categoryMatches && searchMatches;
+    });
+
+    grid.innerHTML = filtered.map(product => `
+      <article class="product-card">
+
+        <div class="product-image">
+          <img
+            src="${product.image}"
+            alt="${product.name}"
+            loading="lazy"
+            onerror="this.style.display='none'">
+
+          ${product.tag
+            ? `<span class="product-tag">${product.tag}</span>`
+            : ""}
+        </div>
+
+        <div class="product-info">
+
+          <span class="product-category">
+            ${product.categoryName}
+          </span>
+
+          <h3>${product.name}</h3>
+
+          <p class="product-description">
+            ${product.description}
+          </p>
+
+          <div class="product-bottom">
+
+            <div class="product-price">
+              ${formatPrice(product.price)}
+              <small>قیمت نمونه</small>
+            </div>
+
+            <button
+              class="add-button"
+              onclick="addToCart(${product.id})"
+              aria-label="افزودن ${product.name} به سبد خرید">
+              +
+            </button>
+
+          </div>
+        </div>
+      </article>
+    `).join("");
+
+    emptyMessage.style.display =
+      filtered.length === 0 ? "block" : "none";
+  }
+
+  // فیلتر دسته‌بندی محصولات
+  function setCategory(category) {
+    selectedCategory = category;
+
+    document.querySelectorAll(".filter-button").forEach(button => {
+      button.classList.toggle(
+        "active",
+        button.dataset.category === category
+      );
+    });
+
+    renderProducts();
+
+    const shop = document.getElementById("shop");
+
+    if (shop && category !== "all") {
+      shop.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  }
+
+  // افزودن محصول به سبد خرید
+  function addToCart(productId) {
+    const product = products.find(item => item.id === productId);
+
+    if (!product) return;
+
+    const existingItem = cart.find(item => item.id === productId);
+
+    if (existingItem) {
+      existingItem.quantity += 1;
+    } else {
+      cart.push({
+        ...product,
+        quantity: 1
+      });
+    }
+
+    renderCart();
+    showToast("محصول به سبد خرید اضافه شد 🛒");
+  }
+
+  // تغییر تعداد محصولات
+  function changeQuantity(productId, amount) {
+    const item = cart.find(product => product.id === productId);
+
+    if (!item) return;
+
+    item.quantity += amount;
+
+    if (item.quantity <= 0) {
+      cart = cart.filter(product => product.id !== productId);
+    }
+
+    renderCart();
+  }
+
+  // حذف محصول از سبد خرید
+  function removeFromCart(productId) {
+    cart = cart.filter(product => product.id !== productId);
+    renderCart();
+    showToast("محصول از سبد خرید حذف شد.");
+  }
+
+  // نمایش سبد خرید
+  function renderCart() {
+    const cartItems = document.getElementById("cartItems");
+    const cartCount = document.getElementById("cartCount");
+    const cartTotal = document.getElementById("cartTotal");
+
+    const totalQuantity = cart.reduce(
+      (sum, item) => sum + item.quantity,
+      0
+    );
+
+    const totalPrice = cart.reduce(
+      (sum, item) => sum + item.price * item.quantity,
+      0
+    );
+
+    cartCount.textContent = persianNumber(totalQuantity);
+    cartTotal.textContent = formatPrice(totalPrice);
+
+    if (cart.length === 0) {
+      cartItems.innerHTML = `
+        <div class="cart-empty">
+          <div style="font-size:48px">🛒</div>
+          <h3>سبد خریدت خالیه!</h3>
+          <p>محصولات موردعلاقه‌ات را انتخاب کن.</p>
+        </div>
+      `;
+      return;
+    }
+
+    cartItems.innerHTML = cart.map(item => `
+      <div class="cart-item">
+
+        <img
+          src="${item.image}"
+          alt="${item.name}"
+          onerror="this.style.display='none'">
+
+        <div>
+          <h4>${item.name}</h4>
+
+          <small>${formatPrice(item.price * item.quantity)}</small>
+
+          <div class="quantity-control">
+            <button
+              onclick="changeQuantity(${item.id}, 1)"
+              aria-label="افزایش تعداد">+</button>
+
+            <span>${persianNumber(item.quantity)}</span>
+
+            <button
+              onclick="changeQuantity(${item.id}, -1)"
+              aria-label="کاهش تعداد">−</button>
+          </div>
+        </div>
+
+        <button
+          class="remove-item"
+          onclick="removeFromCart(${item.id})">
+          حذف
+        </button>
+
+      </div>
+    `).join("");
+  }
+
+  // باز کردن سبد خرید
+  function openCart() {
+    document.getElementById("cartPanel").classList.add("open");
+    document.getElementById("cartOverlay").classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+
+  // بستن سبد خرید
+  function closeCart() {
+    document.getElementById("cartPanel").classList.remove("open");
+    document.getElementById("cartOverlay").classList.remove("open");
+    document.body.style.overflow = "";
+  }
+
+  // ثبت سفارش از طریق واتساپ
+  function checkoutWhatsApp() {
+    if (cart.length === 0) {
+      showToast("ابتدا محصولی به سبد خرید اضافه کن.");
+      return;
+    }
+
+    const totalPrice = cart.reduce(
+      (sum, item) => sum + item.price * item.quantity,
+      0
+    );
+
+    let message = "سلام، برای سفارش از فروشگاه پتینو پیام می‌دهم. 🐾\n\n";
+    message += "محصولات انتخابی من:\n\n";
+
+    cart.forEach((item, index) => {
+      message +=
+        `${index + 1}. ${item.name}\n` +
+        `تعداد: ${item.quantity}\n` +
+        `قیمت: ${formatPrice(item.price * item.quantity)}\n\n`;
+    });
+
+    message += `مبلغ مجموع: ${formatPrice(totalPrice)}\n\n`;
+    message += "لطفاً موجودی، قیمت نهایی و هزینه ارسال را اعلام کنید.";
+
+    const whatsappURL =
+      "https://wa.me/" +
+      WHATSAPP_NUMBER +
+      "?text=" +
+      encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank");
+  }
+
+  // پیام کوتاه روی صفحه
+  let toastTimer;
+
+  function showToast(message) {
+    const toast = document.getElementById("toast");
+
+    toast.textContent = message;
+    toast.classList.add("show");
+
+    clearTimeout(toastTimer);
+
+    toastTimer = setTimeout(() => {
+      toast.classList.remove("show");
+    }, 2500);
+  }
+
+  // راه‌اندازی سایت
+  document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.getElementById("searchInput");
+
+    if (searchInput) {
+      searchInput.addEventListener("input", renderProducts);
+    }
+
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear().toLocaleString("fa-IR");
+
+    renderProducts();
+    renderCart();
+  });
+
+  // بستن سبد خرید با کلید Escape
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      closeCart();
+    }
+  });
+</script>
+
+</body>
+</html>
