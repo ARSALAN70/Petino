@@ -1,1 +1,120 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#176b52">
+  <title>پتینو | فروشگاه غذای حیوانات خانگی</title>
+  <style>
+    :root{--green:#176b52;--green2:#e6f4ed;--ink:#17231e;--muted:#68756f;--cream:#fbfaf6;--orange:#f3a45d;--line:#e7ece8}
+    *{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.8}
+    a{text-decoration:none;color:inherit}button,input{font:inherit}.wrap{width:min(1160px,92%);margin:auto}
+    .topbar{background:#103f32;color:#eaf7ef;text-align:center;font-size:12px;padding:7px 12px}
+    header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+    .nav{display:flex;align-items:center;gap:24px;min-height:76px}.brand{display:flex;align-items:center;gap:9px;font-weight:900;font-size:25px;color:var(--green);white-space:nowrap}
+    .logo{display:grid;place-items:center;background:var(--green);color:#fff;width:42px;height:42px;border-radius:15px;font-size:23px}
+    .links{display:flex;gap:20px;color:#45534c;font-size:14px}.links a:hover{color:var(--green)}
+    .search{display:flex;align-items:center;gap:8px;background:#f3f6f3;border:1px solid #e9eee9;border-radius:13px;padding:8px 12px;flex:1;min-width:120px}
+    .search input{border:0;outline:0;background:transparent;width:100%;font-size:13px}
+    .cart{border:0;background:var(--green);color:#fff;border-radius:12px;padding:10px 14px;cursor:pointer;white-space:nowrap}
+    .hero{padding:42px 0 28px}.hero-card{background:linear-gradient(115deg,#e5f4e9,#f8f4e7);border-radius:28px;display:grid;grid-template-columns:1.1fr .9fr;overflow:hidden;min-height:330px;align-items:center}
+    .hero-copy{padding:35px 42px}.eyebrow{display:inline-block;color:var(--green);background:#fff;border-radius:30px;padding:5px 13px;font-size:12px;font-weight:bold}
+    h1{font-size:clamp(28px,4vw,46px);line-height:1.45;margin:14px 0 10px;letter-spacing:-1px}.hero p{color:#53665c;margin:0 0 22px;max-width:470px}
+    .primary{display:inline-block;background:var(--green);color:#fff;border:0;border-radius:13px;padding:11px 20px;cursor:pointer;font-weight:bold}
+    .secondary{display:inline-block;border:1px solid #cadbd0;color:var(--green);background:#fff;border-radius:13px;padding:10px 18px;margin-right:8px;cursor:pointer}
+    .hero-art{display:grid;place-items:center;height:100%;min-height:270px;position:relative}
+    .blob{width:260px;height:260px;border-radius:45% 55% 53% 47%;background:#fff9ed;display:grid;place-items:center;font-size:130px;transform:rotate(-7deg);box-shadow:0 20px 45px #315d4017}
+    .float{position:absolute;background:#fff;border-radius:16px;padding:10px 14px;box-shadow:0 10px 25px #173e2b12;font-size:12px}.float.one{top:42px;right:15px}.float.two{bottom:38px;left:15px}
+    .benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0 35px}.benefit{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);padding:13px;border-radius:15px}.benefit .ico{font-size:25px}.benefit b{display:block;font-size:13px}.benefit small{display:block;color:var(--muted);font-size:11px}
+    section{padding:15px 0 30px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:10px;margin-bottom:18px}.section-head h2{margin:0;font-size:25px}.section-head p{margin:2px 0 0;color:var(--muted);font-size:13px}.all{color:var(--green);font-size:13px;font-weight:bold}
+    .categories{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.category{border:1px solid var(--line);border-radius:20px;background:#fff;padding:22px;text-align:center;transition:.2s;cursor:pointer}.category:hover{transform:translateY(-4px);box-shadow:0 12px 30px #173e2b0d}.category .pet{margin:0 auto 10px;display:grid;place-items:center;width:90px;height:90px;border-radius:27px;background:var(--green2);font-size:48px}.category h3{margin:0;font-size:16px}.category p{margin:3px 0 0;color:var(--muted);font-size:12px}
+    .products{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.product{background:#fff;border:1px solid var(--line);border-radius:19px;overflow:hidden;position:relative}.product-art{height:160px;display:grid;place-items:center;font-size:70px;background:linear-gradient(135deg,#eef7ef,#f9f3e8);position:relative}.badge{position:absolute;top:12px;right:12px;background:#fff0df;color:#98501c;border-radius:20px;padding:3px 9px;font-size:11px}.product-body{padding:14px}.product-body .type{font-size:11px;color:var(--green);font-weight:bold}.product h3{font-size:14px;margin:4px 0 8px;line-height:1.7;min-height:48px}.rating{font-size:11px;color:#bd7c26}.price-row{display:flex;align-items:center;justify-content:space-between;gap:6px;margin-top:10px}.price{font-weight:900;font-size:15px}.price small{font-size:10px;font-weight:normal;color:var(--muted)}.add{border:0;background:var(--green2);color:var(--green);border-radius:10px;width:38px;height:38px;font-size:22px;cursor:pointer}.add:hover{background:var(--green);color:white}
+    .banner{display:flex;align-items:center;justify-content:space-between;gap:20px;background:#173f32;color:#fff;border-radius:24px;padding:25px 30px;margin:18px 0 38px}.banner h2{margin:0;font-size:23px}.banner p{margin:4px 0 0;color:#d5e9dd;font-size:13px}.banner .primary{background:#f3a45d;color:#30251c;white-space:nowrap}
+    .newsletter{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:35px}.newsletter h3{margin:0}.newsletter p{margin:2px 0;color:var(--muted);font-size:13px}.emailbox{display:flex;gap:8px;min-width:300px}.emailbox input{border:1px solid var(--line);border-radius:12px;padding:10px 12px;min-width:0;flex:1;outline-color:var(--green)}
+    footer{background:#f0f4ef;padding:28px 0;color:#506057;font-size:12px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot strong{color:var(--green);font-size:19px}.note{margin-top:18px;padding-top:13px;border-top:1px solid #dce5dd;color:#77847b}
+    .toast{position:fixed;bottom:20px;left:20px;background:#173f32;color:#fff;padding:12px 18px;border-radius:12px;box-shadow:0 8px 30px #0002;display:none;z-index:10}
+    @media(max-width:850px){.links{display:none}.nav{gap:12px}.hero-card{grid-template-columns:1fr}.hero-copy{padding:28px}.hero-art{min-height:230px;grid-row:1}.blob{width:190px;height:190px;font-size:95px}.float.one{top:22px;right:20px}.float.two{bottom:20px;left:20px}.benefits{grid-template-columns:repeat(2,1fr)}.categories,.products{grid-template-columns:repeat(2,1fr)}.newsletter{align-items:stretch;flex-direction:column}.emailbox{min-width:0}}
+    @media(max-width:480px){.nav{flex-wrap:wrap;padding:12px 0}.brand{font-size:21px}.search{order:3;flex-basis:100%}.cart{margin-right:auto}.hero{padding-top:20px}.hero-copy{padding:22px}.hero-art{min-height:200px}.blob{width:160px;height:160px;font-size:80px}.benefits{gap:8px}.benefit{padding:9px}.benefit .ico{font-size:21px}.benefit b{font-size:11px}.benefit small{font-size:10px}.categories,.products{gap:10px}.category{padding:14px 8px}.category .pet{width:70px;height:70px;font-size:38px}.product-art{height:125px;font-size:55px}.product-body{padding:10px}.product h3{font-size:12px}.price{font-size:13px}.banner{padding:20px;align-items:flex-start;flex-direction:column}.section-head h2{font-size:21px}}
+  </style>
+</head>
+<body>
+  <div class="topbar">🐾 انتخاب باکیفیت برای دوست‌های پشمالو | ارسال سفارش در سراسر ایران (نمونه نمایشی)</div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#"><span class="logo">🐾</span><span>پتینو</span></a>
+      <nav class="links"><a href="#categories">دسته‌بندی‌ها</a><a href="#products">محصولات</a><a href="#wholesale">خرید عمده</a><a href="#about">درباره ما</a></nav>
+      <label class="search">🔎 <input id="searchInput" placeholder="دنبال چه محصولی هستی؟" aria-label="جستجوی محصول"></label>
+      <button class="cart" id="cartButton">🛒 سبد خرید <span id="cartCount">۰</span></button>
+    </div>
+  </header>
+  <main class="wrap">
+    <div class="hero">
+      <div class="hero-card">
+        <div class="hero-copy">
+          <span class="eyebrow">مراقبت بهتر، هر روز</span>
+          <h1>برای عشق‌های کوچولوت<br>بهترین‌ها رو انتخاب کن</h1>
+          <p>غذای روزانه، تشویقی و ملزومات پت را با تجربه‌ای ساده و دلنشین پیدا کن.</p>
+          <a class="primary" href="#products">مشاهده محصولات ←</a>
+          <a class="secondary" href="#categories">دسته‌بندی‌ها</a>
+        </div>
+        <div class="hero-art" aria-label="تصویر تزئینی حیوانات خانگی">
+          <div class="blob">🐶🐱</div>
+          <div class="float one">⭐ انتخاب‌های محبوب پت‌ها</div>
+          <div class="float two">💚 خرید راحت و مطمئن</div>
+        </div>
+      </div>
+    </div>
+    <div class="benefits">
+      <div class="benefit"><span class="ico">🚚</span><div><b>ارسال قابل پیگیری</b><small>جزئیات پس از راه‌اندازی</small></div></div>
+      <div class="benefit"><span class="ico">🛡️</span><div><b>خرید مطمئن</b><small>اطلاعات شفاف محصول</small></div></div>
+      <div class="benefit"><span class="ico">💬</span><div><b>پشتیبانی مشتریان</b><small>پاسخ‌گویی و راهنمایی</small></div></div>
+      <div class="benefit"><span class="ico">🎁</span><div><b>پیشنهادهای ویژه</b><small>تخفیف‌های دوره‌ای</small></div></div>
+    </div>
 
+    <section id="categories">
+      <div class="section-head"><div><h2>چی لازم داری؟</h2><p>از دسته‌بندی موردنظرت شروع کن.</p></div><a class="all" href="#products">همه محصولات ←</a></div>
+      <div class="categories">
+        <a class="category" data-category="گربه" href="#products"><div class="pet">🐱</div><h3>غذای گربه</h3><p>خشک، مرطوب و روزانه</p></a>
+        <a class="category" data-category="سگ" href="#products"><div class="pet" style="background:#fff0df">🐶</div><h3>غذای سگ</h3><p>برای سن‌ها و اندازه‌های مختلف</p></a>
+        <a class="category" data-category="تشویقی" href="#products"><div class="pet" style="background:#f8eaf0">🦴</div><h3>تشویقی</h3><p>برای آموزش و سرگرمی</p></a>
+        <a class="category" data-category="بهداشتی" href="#products"><div class="pet" style="background:#eaf0ff">🧴</div><h3>بهداشتی و مراقبتی</h3><p>برای مراقبت روزمره</p></a>
+      </div>
+    </section>
+
+    <section id="products">
+      <div class="section-head"><div><h2>محصولات پیشنهادی</h2><p>نمونه‌های نمایشی؛ قیمت و مشخصات را قبل از فروش واقعی جایگزین کن.</p></div><a class="all" href="#products">مشاهده همه ←</a></div>
+      <div class="products" id="productGrid">
+        <article class="product" data-name="غذای خشک گربه بالغ" data-category="گربه"><div class="product-art"><span class="badge">محبوب</span>🐱🥣</div><div class="product-body"><span class="type">غذای گربه</span><h3>غذای خشک گربه بالغ — بسته نمونه</h3><div class="rating">★★★★★ <span style="color:#7a857e"> (نمونه)</span></div><div class="price-row"><div class="price">۴۸۰,۰۰۰ <small>تومان</small></div><button class="add" aria-label="افزودن غذای گربه به سبد">+</button></div></div></article>
+        <article class="product" data-name="غذای خشک سگ" data-category="سگ"><div class="product-art"><span class="badge">پرفروش</span>🐶🥣</div><div class="product-body"><span class="type">غذای سگ</span><h3>غذای خشک سگ — بسته نمونه</h3><div class="rating">★★★★★ <span style="color:#7a857e"> (نمونه)</span></div><div class="price-row"><div class="price">۶۹۰,۰۰۰ <small>تومان</small></div><button class="add" aria-label="افزودن غذای سگ به سبد">+</button></div></div></article>
+        <article class="product" data-name="تشویقی نرم سگ و گربه" data-category="تشویقی"><div class="product-art"><span class="badge">پیشنهاد ویژه</span>🦴✨</div><div class="product-body"><span class="type">تشویقی</span><h3>تشویقی نرم سگ و گربه — بسته نمونه</h3><div class="rating">★★★★☆ <span style="color:#7a857e"> (نمونه)</span></div><div class="price-row"><div class="price">۱۵۰,۰۰۰ <small>تومان</small></div><button class="add" aria-label="افزودن تشویقی به سبد">+</button></div></div></article>
+        <article class="product" data-name="شامپو بهداشتی حیوانات" data-category="بهداشتی"><div class="product-art"><span class="badge">مراقبت</span>🧴🐾</div><div class="product-body"><span class="type">بهداشتی</span><h3>شامپو مخصوص حیوانات — بسته نمونه</h3><div class="rating">★★★★★ <span style="color:#7a857e"> (نمونه)</span></div><div class="price-row"><div class="price">۲۲۰,۰۰۰ <small>تومان</small></div><button class="add" aria-label="افزودن شامپو به سبد">+</button></div></div></article>
+      </div>
+      <p id="noResults" style="display:none;color:#68756f;text-align:center">محصولی با این عبارت پیدا نشد.</p>
+    </section>
+
+    <div class="banner" id="wholesale">
+      <div><h2>پت‌شاپ داری؟ برای خرید عمده با ما در ارتباط باش.</h2><p>فرم همکاری عمده را در نسخه نهایی به سیستم ثبت درخواست متصل می‌کنیم.</p></div>
+      <button class="primary" id="wholesaleButton">درخواست همکاری</button>
+    </div>
+
+    <div class="newsletter" id="about">
+      <div><h3>خبرهای خوب برای دوست پشمالوت 🐾</h3><p>این بخش در نسخه نهایی می‌تواند برای عضویت در خبرنامه استفاده شود.</p></div>
+      <form class="emailbox" id="newsletterForm"><input type="email" placeholder="ایمیل شما (اختیاری)" aria-label="ایمیل" required><button class="primary">ثبت</button></form>
+    </div>
+  </main>
+  <footer><div class="wrap"><div class="foot"><div><strong>پتینو 🐾</strong><div>انتخاب آگاهانه برای حیوانات خانگی</div></div><div>تماس با ما · قوانین خرید · روش ارسال</div><div>این نسخه، نمونه اولیه و نمایشی فروشگاه است.</div></div><div class="note">توجه: قیمت‌ها، موجودی، امتیازها، ارسال و امکانات پرداخت این صفحه نمونه‌ای هستند و تا زمان اتصال به سامانه واقعی، سفارش یا پرداخت واقعی انجام نمی‌شود.</div></div></footer>
+  <div class="toast" id="toast" role="status"></div>
+  <script>
+    const toast = document.getElementById('toast');
+    let toastTimer;
+    function showToast(message){toast.textContent=message;toast.style.display='block';clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.style.display='none',2600)}
+    let cartCount=0;
+    document.querySelectorAll('.add').forEach(btn=>btn.addEventListener('click',()=>{cartCount++;document.getElementById('cartCount').textContent=String(cartCount).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);showToast('محصول به سبد نمایشی اضافه شد.')}))
+    document.getElementById('cartButton').addEventListener('click',()=>showToast(cartCount?`تعداد ${cartCount} قلم در سبد نمایشی است؛ ثبت سفارش هنوز فعال نیست.`:'سبد خرید فعلاً خالی است.'))
+    document.getElementById('searchInput').addEventListener('input',e=>{const q=e.target.value.trim().toLowerCase();let visible=0;document.querySelectorAll('.product').forEach(card=>{const match=(card.dataset.name+' '+card.dataset.category).toLowerCase().includes(q);card.style.display=match?'':'none';if(match)visible++});document.getElementById('noResults').style.display=visible?'none':'block'})
+    document.querySelectorAll('.category').forEach(card=>card.addEventListener('click',()=>{const q=card.dataset.category;document.getElementById('searchInput').value=q;document.getElementById('searchInput').dispatchEvent(new Event('input'))}))
+    document.getElementById('wholesaleButton').addEventListener('click',()=>showToast('در مرحله بعد فرم همکاری عمده را می‌سازیم.'))
+    document.getElementById('newsletterForm').addEventListener('submit',e=>{e.preventDefault();showToast('فرم نمایشی است؛ هنوز اطلاعاتی ذخیره نمی‌شود.');e.target.reset()})
+  </script>
+</body>
+</html>
